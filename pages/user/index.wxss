@@ -1,0 +1,148 @@
+/* pages/u3ser/index.wxss */
+page {
+  background-color: #edece8;
+}
+
+/* user's info */
+.user_info_wrap {
+  height: 45vh;
+  position: relative;
+}
+.user_info_wrap .user_img_wrap {
+  height: 100%;
+  overflow: hidden;
+  /* background-color: var(--themeColor); */
+}
+.user_img_wrap .user_bg {
+  height: 100%;
+  filter: blur(8rpx);
+}
+.user_img_wrap .user_info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.user_info .user_icon {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.user_info .user_name {
+  color: #fff;
+  font-size: 40rpx;
+  padding: 20rpx;
+}
+
+
+/* navigation to login page */
+.user_info_wrap .user_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user_info_wrap .user_btn navigator{
+  padding: 20rpx 60rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  background-color: var(--themeColor);
+}
+.user_info_wrap .user_btn navigator:active {
+  filter: brightness(80%);
+}
+
+
+
+
+/* this page's conent style */
+.user_content {
+  position: relative;
+}
+
+.user_content .user_main {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100rpx;
+}
+.user_content .user_main > view {
+  margin-bottom: 20rpx;
+}
+.user_main .history_wrap {
+  display: flex;
+  background-color: #fff;
+}
+.history_wrap navigator {
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
+}
+.history_wrap navigator .his_num {
+  color: var(--themeColor);
+
+}
+.history_wrap navigator .his_name {
+  font-size: 24rpx;
+  color: #888;
+}
+
+
+/* 我的订单样式 */
+.order_wrap {
+
+}
+.order_wrap .order_title {
+
+}
+.order_wrap .order_content {
+  display: flex;
+  margin-top: 6rpx;
+}
+.order_content navigator {
+  flex: 1;
+  padding: 20rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.order_content navigator .iconfont {
+  color: var(--themeColor);
+  padding: 10rpx;
+}
+.order_content navigator .order_name {
+  font-size: 24rpx;
+  color: #888;
+}
+
+
+.user_main .address_wrap {
+  /* background-color: #fff; */
+}
+.user_main .app_info_wrap {
+  background-color: #fff;
+}
+.app_info_wrap .app_info_item {
+  padding: 20rpx;
+  border-bottom: solid 1px #eee;
+  font-size: 28rpx;
+  color: #333;
+}
+.app_info_wrap .link_toast{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+.user_main .recommend_wrap {
+  /* background-color: #fff; */
+}
+
+.user_item_command {
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  background-color: #fff;
+}

@@ -1,0 +1,58 @@
+
+<view class="pyg_index">
+  <!-- search border -->
+  <SearchInput></SearchInput>
+
+
+  <!-- banner swiper  -->
+  <view class="index_swiper">
+    <swiper autoplay="true" interval="3000" indicator-dots="true" circular="true">
+      <swiper-item
+      wx:for="{{swiperList}}"
+      wx:key="goods_id">
+        <navigator url="{{item.navigator_url}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+
+  <!-- navigation -->
+  <view class="index_navigation">
+    <navigator
+    wx:for="{{cateList}}"
+    wx:key="name"
+    open-type="switchTab"
+    url="/pages/category/index">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </navigator>
+  </view>
+
+
+  <view class="index_floor">
+    <view class="floor_group"
+      wx:for="{{floorList}}"
+      wx:for-item="item_floor"
+      wx:for-index="title_floor"
+      wx:key="floor_title">
+      <!-- floor's title -->
+      <view class="floor_title">
+        <image src="{{item_floor.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+
+      <!-- floor's content -->
+      <view class="floor_content">
+        <navigator
+        wx:for="{{item_floor.product_list}}"
+        wx:for-item="item_content"
+        wx:for-index="index_content"
+        wx:key="name"
+        url="{{item_content.navigator_url}}">
+          <image src="{{item_content.image_src}}" mode="{{index_content === 0 ? 'widthFix' : 'scaleToFill'}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+</view>
